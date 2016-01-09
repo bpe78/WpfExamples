@@ -1,1 +1,1 @@
-# WpfExamples_MovieStrip
+# My WPF examples & code snippets
