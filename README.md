@@ -1,0 +1,1 @@
+# WpfExamples_MovieStrip
