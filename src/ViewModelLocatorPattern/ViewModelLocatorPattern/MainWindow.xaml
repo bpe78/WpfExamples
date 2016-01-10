@@ -1,0 +1,29 @@
+﻿<Window x:Class="ViewModelLocatorPattern.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:prism="http://www.codeplex.com/prism"
+				xmlns:local="clr-namespace:ViewModelLocatorPattern"
+        Title="MainWindow" Height="350" Width="525" DataContext="{StaticResource keyViewModelLocator}">
+  <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<ContentControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.Test1ViewRegion}"
+										DataContext="{Binding VM1}"/>
+
+		<ContentControl Grid.Row="1" Grid.Column="0"
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.Test2ViewRegion}"
+										DataContext="{Binding VM2}"/>
+
+		<ContentControl Grid.Row="1" Grid.Column="1"
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.Test3ViewRegion}"
+										DataContext="{Binding VM3}"/>
+	</Grid>
+</Window>

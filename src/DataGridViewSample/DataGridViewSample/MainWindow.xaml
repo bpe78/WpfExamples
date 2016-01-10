@@ -1,0 +1,34 @@
+﻿<Window x:Class="DataGridViewSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+	<Window.Resources>
+			<Style x:Key="headerStyle">
+				<Setter Property="TextBlock.HorizontalAlignment" Value="Center" />
+			</Style>
+	</Window.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding UserGroups}" SelectedItem="{Binding SelectedUserGroup}" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="Name"
+                 Grid.Row="0" Grid.Column="0" />
+		<DataGrid ItemsSource="{Binding SelectedUserGroup.Users}" Grid.Column="1" AutoGenerateColumns="False" >
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" HeaderStyle="{StaticResource headerStyle}" >
+					<DataGridTextColumn.CellStyle>
+						<Style>
+							<Setter Property="TextBlock.HorizontalAlignment" Value="Right" />
+						</Style>
+					</DataGridTextColumn.CellStyle>
+				</DataGridTextColumn>
+				<DataGridTextColumn Header="User Name" Binding="{Binding Username}" Width="3*" HeaderStyle="{StaticResource headerStyle}" />
+				<DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="3*" HeaderStyle="{StaticResource headerStyle}" />
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>

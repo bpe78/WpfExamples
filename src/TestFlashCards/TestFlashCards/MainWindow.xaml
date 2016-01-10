@@ -1,0 +1,12 @@
+﻿<Window x:Class="TestFlashCards.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:local="clr-namespace:TestFlashCards"
+        Title="MainWindow" Height="600" Width="800"
+				PreviewKeyDown="Canvas_KeyDown">
+	<Canvas Focusable="True" x:Name="_canvas">
+		<local:FlashCardControl Canvas.Left="250" Canvas.Top="300" x:Name="currentCard">
+			
+		</local:FlashCardControl>
+	</Canvas>
+</Window>
