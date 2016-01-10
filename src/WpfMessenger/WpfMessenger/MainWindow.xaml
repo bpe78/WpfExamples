@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfMessenger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+  <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="auto" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Margin="5, 2" >
+			<TextBox Text="{Binding Address,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0, 3" />
+			<ToggleButton IsChecked="{Binding IsServer}" Content="Start asServer" Margin="3" HorizontalAlignment="Left" />
+		</StackPanel>
+		<Button Content="Connect" Command="{Binding ConnectCmd}" 
+						Grid.Row="0" Grid.Column="1" Margin="3" />
+		<TextBox Text="{Binding Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+						 Grid.Row="1" Grid.ColumnSpan="2" Background="Azure" BorderBrush="BlueViolet" BorderThickness="2" />
+		<Button Content="Send" Command="{Binding SendCmd}"
+						Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="5" Padding="10, 2" />
+		
+		<ListBox ItemsSource="{Binding StatusMessages}" Grid.Row="3" Grid.ColumnSpan="2" />
+	</Grid>
+</Window>

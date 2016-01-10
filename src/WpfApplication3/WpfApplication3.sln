@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication3", "WpfApplication3\WpfApplication3.csproj", "{E6D19C88-AE2F-4CF9-AB34-83E46D8FE55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{D7F8DC23-D98D-4B6A-AF91-CDA51A944FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication2", "WpfApplication2\WpfApplication2.csproj", "{159FD4E6-0D9F-4F93-B094-0842CFB43C4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6D19C88-AE2F-4CF9-AB34-83E46D8FE55F}.Debug|x86.ActiveCfg = Debug|x86
+		{E6D19C88-AE2F-4CF9-AB34-83E46D8FE55F}.Debug|x86.Build.0 = Debug|x86
+		{E6D19C88-AE2F-4CF9-AB34-83E46D8FE55F}.Release|x86.ActiveCfg = Release|x86
+		{E6D19C88-AE2F-4CF9-AB34-83E46D8FE55F}.Release|x86.Build.0 = Release|x86
+		{D7F8DC23-D98D-4B6A-AF91-CDA51A944FE8}.Debug|x86.ActiveCfg = Debug|x86
+		{D7F8DC23-D98D-4B6A-AF91-CDA51A944FE8}.Debug|x86.Build.0 = Debug|x86
+		{D7F8DC23-D98D-4B6A-AF91-CDA51A944FE8}.Release|x86.ActiveCfg = Release|x86
+		{D7F8DC23-D98D-4B6A-AF91-CDA51A944FE8}.Release|x86.Build.0 = Release|x86
+		{159FD4E6-0D9F-4F93-B094-0842CFB43C4A}.Debug|x86.ActiveCfg = Debug|x86
+		{159FD4E6-0D9F-4F93-B094-0842CFB43C4A}.Debug|x86.Build.0 = Debug|x86
+		{159FD4E6-0D9F-4F93-B094-0842CFB43C4A}.Release|x86.ActiveCfg = Release|x86
+		{159FD4E6-0D9F-4F93-B094-0842CFB43C4A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

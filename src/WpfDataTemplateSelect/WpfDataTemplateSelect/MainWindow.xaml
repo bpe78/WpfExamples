@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfDataTemplateSelect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:viewModel="clr-namespace:WpfDataTemplateSelect"
+        Title="MainWindow" Height="350" Width="525">
+	<Window.Resources>
+		<DataTemplate DataType="{x:Type viewModel:ViewModel1}" >
+			<viewModel:UserControl1 />
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewModel:ViewModel2}" >
+			<viewModel:UserControl2 />
+		</DataTemplate>
+	</Window.Resources>
+	<Window.DataContext>
+		<!-- <viewModel:ViewModel1 Telefon="1234567890" Adresa="Romania" /> -->
+		<viewModel:ViewModel2 FirstName="Elvis" LastName="Presley" /> 
+	</Window.DataContext>
+  <Border Margin="10, 5">
+		<ContentPresenter Margin="10, 10" Content="{Binding }"/>
+  </Border>
+</Window>

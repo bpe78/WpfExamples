@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApplication10.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:prism="http://www.codeplex.com/prism"
+				xmlns:local="clr-namespace:WpfApplication10"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+	<Window.DataContext>
+		<local:ShellViewModel />
+	</Window.DataContext>
+  <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<ContentControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.ListItemsView}"
+										DataContext="{Binding ListItemsVM}" />
+
+		<ContentControl Grid.Row="1" Grid.Column="0" 
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.AddIncomeView}"
+										DataContext="{Binding AddIncomeVM}"/>
+
+		<ContentControl Grid.Row="1" Grid.Column="1" 
+										prism:RegionManager.RegionName="{x:Static local:RegionDefinitions.AddExpenseView}"
+										DataContext="{Binding AddExpenseVM}"/>
+	</Grid>
+</Window>

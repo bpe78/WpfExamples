@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WpfApplication1.Views.DetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <Grid DataContext="{Binding ActiveItem}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="2*" />
+		</Grid.ColumnDefinitions>
+		<Label Content="Id :" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" />
+		<Label Content="Date :" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" />
+		<Label Content="TypeId :" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" />
+		<Label Content="Amount :" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" />
+		<Label Content="Description :" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" />
+
+		<TextBox Text="{Binding Id, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
+		<TextBox Text="{Binding Date, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" />
+		<TextBox Text="{Binding TypeId, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" />
+		<TextBox Text="{Binding Amount, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" />
+		<TextBox Text="{Binding Description, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" />
+	</Grid>
+</UserControl>
